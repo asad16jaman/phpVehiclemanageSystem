@@ -64,6 +64,9 @@ include BASE_PATH . '/includes/header.php';
     p{
         font-size: 18px !important;
     }
+    .mt-1{
+        margin-top: 5px;
+    }
 </style>
 <!-- Main container -->
 <div id="page-wrapper">
@@ -91,6 +94,7 @@ include BASE_PATH . '/includes/header.php';
                 <th width="6%">Fav Count</th>
                 <th width="8%">Fav QR</th>
                 <th width="7%">Vote Count</th>
+                <th width="6%">Change Vote</th>
                 <th width="10%">Category</th>
                 <th width="7%">QR</th>
                 <th width="10%">Actions</th>
@@ -106,11 +110,17 @@ include BASE_PATH . '/includes/header.php';
                 <td><?php echo xss_clean($row['vehicle_maker']); ?></td>
                 <td><?php echo xss_clean($row['fav_vote']); ?></td>
                 <td><img src="./../images/publicQr/<?php echo $row['qrcode'] ?>" width="60"></td>
-                <td><?php echo xss_clean($row['vote_status']); ?></td>
+                <td id="vote_<?php echo $row['id'] ?>"><?php echo xss_clean($row['vote_status']); ?></td>
+                <td class="d-flex justify-content-center">
+                    <!-- //increase and decrease button of regular vote -->
+                    <button class="btn btn-primary" onclick="increase(<?php echo $row['id'] ?>,true)">+</button>
+                    <button class="btn btn-warning mt-1" onclick="increase(<?php echo $row['id'] ?>,false)">-</button>
+                </td>
                 <td><?php echo xss_clean($row['category']); ?></td>
                 <td>
                     <img src="./../images/<?php echo $row['qrcode'] ?>" width="60">
                 </td>
+                
                 <td>
                     <a href="edit_vehicle.php?id=<?php echo $row['id']; ?>" class="btn btn-info"><i class="glyphicon glyphicon-edit"></i></a>
                     <a href="https://www.thelittlebigshow.com/app/view.php?id=<?php echo $row['id']; ?>" class="btn btn-info"><i class="glyphicon glyphicon-print"></i></a>
@@ -212,5 +222,10 @@ include BASE_PATH . '/includes/header.php';
     </div>
     <!-- //Pagination -->
 </div>
+<!-- <p id="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quidem?</p> -->
+
+
+<script src="assets/js/custom.js"></script>
+
 <!-- //Main container -->
 <?php include BASE_PATH . '/includes/footer.php';?>
