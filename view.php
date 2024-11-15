@@ -58,8 +58,11 @@
             $setting = mysqli_fetch_assoc($settingQuery);
   
         if(isset($_GET['id'])){
-            $query = sprintf("SELECT * FROM vehicles WHERE id='".$_GET['id']."'");
+            $query = sprintf("SELECT vehicles.*,category.color FROM vehicles INNER JOIN category on vehicles.category = category.name WHERE vehicles.id='".$_GET['id']."'");
+            
             $query_run = mysqli_query($conn, $query);
+
+          
             if(mysqli_num_rows($query_run) > 0){
                 foreach($query_run as $row){
                     ?>
@@ -131,7 +134,7 @@
                                             <h4>Class / Category:</h4>
                                         </div>
                                         <div class="label-data">
-                                            <h4 style="color: red"><?php echo $row['category'] ?></h4>
+                                            <h4 style="color: <?php echo $row['color'] ?>"><?php echo $row['category'] ?></h4>
                                         </div>
                                     </div>
                                 </div>
