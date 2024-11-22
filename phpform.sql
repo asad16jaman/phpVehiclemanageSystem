@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 30, 2024 at 05:48 PM
+-- Generation Time: Nov 22, 2024 at 02:05 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -44,8 +44,7 @@ CREATE TABLE `admin_accounts` (
 INSERT INTO `admin_accounts` (`id`, `user_name`, `password`, `series_id`, `remember_token`, `expires`, `admin_type`) VALUES
 (4, 'superadmin.old', '$2y$10$eo7.w0Ttuy8mOBMvDlGqDeewQERkXu//7qO3jXp5NC76LwfAZpNrO', 'rvuWJHMd5LTxLC2J', '$2y$10$LDUi4w/UAM2PgfMoKkLo4.igJX39G5/WQOEDHRaDy3y2KZeIxXggm', '2019-02-16 22:39:57', 'super'),
 (7, 'anand.old', '$2y$10$OrQFRZdSUP3X2kvGZrg.zeplQkxcJAq1s6atRehyCpbEvOVPu8KPe', NULL, NULL, NULL, 'admin'),
-(8, 'admin', '$2y$10$RnDwpen5c8.gtZLaxHEHDOKWY77t/20A4RRkWBsjlPuu7Wmy0HyBu', 'ACwykFa2dvVbPrY7', '$2y$10$EkyTmxJoHSG2H9zs4h4T0OnKXZ/a9BjAE7Qgokamf54pO/lcXZThe', '2024-11-29 04:50:13', 'admin'),
-(12, 'asad', '$2y$10$IGV2S8sxbejDcxyWl9zDA.d5eYGdvbhpshpZYR3PinNEumNhWlGPy', NULL, NULL, NULL, 'admin');
+(8, 'admin', '$2y$10$RnDwpen5c8.gtZLaxHEHDOKWY77t/20A4RRkWBsjlPuu7Wmy0HyBu', 'ACwykFa2dvVbPrY7', '$2y$10$EkyTmxJoHSG2H9zs4h4T0OnKXZ/a9BjAE7Qgokamf54pO/lcXZThe', '2024-11-29 04:50:13', 'admin');
 
 -- --------------------------------------------------------
 
@@ -65,9 +64,8 @@ CREATE TABLE `category` (
 
 INSERT INTO `category` (`id`, `name`, `color`) VALUES
 (1, '1950s', '#477cb8'),
-(2, '1960s', '#000000'),
 (3, '1970s', '#000000'),
-(4, 'Modified', '#000000'),
+(4, 'Modified', '#69fa83'),
 (6, 'Unrestored Original', '#000000'),
 (7, 'Resto-Mod', '#000000'),
 (8, 'Custom', '#000000'),
@@ -79,8 +77,7 @@ INSERT INTO `category` (`id`, `name`, `color`) VALUES
 (22, 'Modern -1990 and Up', '#000000'),
 (16, 'Rat Rod', '#000000'),
 (17, 'Under Construction', '#000000'),
-(23, 'Lowrider', '#000000'),
-(24, 'new Cat', '#550b75');
+(23, 'Lowrider', '#000000');
 
 -- --------------------------------------------------------
 
@@ -361,7 +358,7 @@ INSERT INTO `vehicles` (`id`, `name`, `address`, `phone`, `vehicle_maker`, `vehi
 (122, 'Warren Strader', 'Moses Lake', '', 'Pontiac', 'Torpido', '1940', '2', '1950s', 'yes', '1717857600.png', '2024-06-08 07:40:00', '0', NULL, 1),
 (123, 'tracy fitzhugh', 'Marysville', '4254462183', 'Ford', 'A', '1930', '1', 'Under Construction', 'yes', '1717857849.png', '2024-06-08 07:44:09', '0', NULL, 1),
 (124, 'Larry', 'Springdale', '', 'Chevy', 'Camaro', '1969', '0', '1960s', 'yes', '1717857969.png', '2024-06-08 07:46:09', '0', NULL, 1),
-(125, 'Karen Crook', 'Moses Lake', '', 'Geo Metro', 'Convertable', '1992', '0', 'Unrestored Original', 'yes', '1717858193.png', '2024-06-08 07:49:53', '0', NULL, 1),
+(125, 'Karen Crook', 'Moses Lake', '', 'Geo Metro', 'Convertable', '1992', '8', 'Unrestored Original', 'yes', '1717858193.png', '2024-06-08 07:49:53', '0', NULL, 1),
 (126, 'Gerald McClain', 'Moses Lake', '', 'Ford', 'Mustang Boss 302', '1970', '0', 'Unrestored Original', 'yes', '1717858507.png', '2024-06-08 07:55:07', '0', NULL, 1),
 (127, 'Roger Holloway', 'Soap Lake', '', 'Chevy', 'Pickup', '1950', '1', 'Pickup', 'yes', '1717858651.png', '2024-06-08 07:57:31', '0', NULL, 1),
 (128, 'Bob Kent', 'Moses Lake ', '', 'Chevrolet ', 'Pickup', '1941', '0', 'Modified', 'yes', '1717858690.png', '2024-06-08 07:58:10', '0', NULL, 1),
@@ -369,12 +366,12 @@ INSERT INTO `vehicles` (`id`, `name`, `address`, `phone`, `vehicle_maker`, `vehi
 (130, 'Eric Nielsen', 'Soap Lake', '', 'Chevy', 'El Camino', '1967', '0', '1960s', 'yes', '1717859101.png', '2024-06-08 08:05:01', '0', NULL, 1),
 (131, 'Josh Gray', 'Stratford', '', 'Buick', 'Electra', '1962', '0', 'Unrestored Original', 'yes', '1717859372.png', '2024-06-08 08:09:32', '0', NULL, 1),
 (132, 'Alex Gray', 'Moses Lake', '', 'Ford', 'Ranger', '1988-94', '0', 'Pickup', 'yes', '1717859607.png', '2024-06-08 08:13:27', '0', NULL, 1),
-(133, 'Jason Jones', 'stanwood', '', 'Chevy', 'Pickup', '1954', '1', 'Pickup', 'yes', '1717859708.png', '2024-06-08 08:15:08', '0', NULL, 1),
+(133, 'Jason Jones', 'stanwood', '', 'Chevy', 'Pickup', '1954', '5', 'Pickup', 'yes', '1717859708.png', '2024-06-08 08:15:08', '0', NULL, 1),
 (134, 'Bill Anderson', 'Moses Lake', '', 'Ford', 'Model A', '1930', '0', 'Street Rod', 'yes', '1717859779.png', '2024-06-08 08:16:19', '0', NULL, 1),
 (135, 'Brian Nielson', 'Moses Lake', '', 'Chevrolet', 'El Camino', '1978', '0', 'Resto-Mod', 'yes', '1717859918.png', '2024-06-08 08:18:38', '0', NULL, 1),
 (136, 'Pete Vezzoni', 'Moses Lake', '', 'Ford', 'F100', '1956', '0', 'Pickup', 'yes', '1717860080.png', '2024-06-08 08:21:20', '0', NULL, 1),
 (137, 'Jake A', 'Ephrata', '', 'Dodge', 'Pickup', '1971', '0', 'Pickup', 'yes', '1717860216.png', '2024-06-08 08:23:36', '0', NULL, 1),
-(138, 'Larry Hagadorn ', 'Soap Lake', '', 'Dodge', 'Challenger', '2016', '0', 'Modern -1990 and Up', 'yes', '1717860238.png', '2024-06-08 08:23:58', '0', NULL, 1),
+(138, 'Larry Hagadorn ', 'Soap Lake', '', 'Dodge', 'Challenger', '2016', '6', 'Modern -1990 and Up', 'yes', '1717860238.png', '2024-06-08 08:23:58', '0', NULL, 1),
 (139, 'Kevin Ray', 'Soap Lake', '', 'Jeep', 'Willis', '1950', '4', 'Rat Rod', 'yes', '1717860394.png', '2024-06-08 08:26:34', '0', NULL, 1),
 (140, 'Joel', 'Moses Lake', '', 'International', 'Pickup', '1936', '0', 'Rat Rod', 'yes', '1717860561.png', '2024-06-08 08:29:21', '0', NULL, 1),
 (141, 'Patrick Lyons', 'Soap Lake', '', 'Chevy', 'Bel Air ', '1955 Convert.', '2', 'Unrestored Original', 'yes', '1717860612.png', '2024-06-08 08:30:12', '0', NULL, 1),
@@ -393,18 +390,18 @@ INSERT INTO `vehicles` (`id`, `name`, `address`, `phone`, `vehicle_maker`, `vehi
 (154, 'Norman Ott', 'Odessa', '', 'Kia', 'EV6', '2023', '0', 'Modern -1990 and Up', 'yes', '1717862075.png', '2024-06-08 08:54:35', '0', NULL, 1),
 (155, 'Midnight Wolf', 'Moses Lake', '', 'Dodge', 'Challenger SRT8', '2009', '0', 'Modern -1990 and Up', 'yes', '1717862335.png', '2024-06-08 08:58:55', '0', NULL, 1),
 (156, 'Wayne Hubbs', 'Soap Lake', '', 'Chevy', 'Pickup', '!984', '0', 'Unrestored Original', 'yes', '1717862533.png', '2024-06-08 09:02:13', '0', NULL, 1),
-(157, 'Mike Lamotte', 'Omak', '', 'Ford', 'Sedan', '1939', '0', 'Resto-Mod', 'yes', '1717862582.png', '2024-06-08 09:03:02', '0', NULL, 1),
+(157, 'Mike Lamotte', 'Omak', '', 'Ford', 'Sedan', '1939', '1', 'Resto-Mod', 'yes', '1717862582.png', '2024-06-08 09:03:02', '0', NULL, 1),
 (158, 'Susan Odorizzi', 'Wilson Creek', '', 'Ford', 'Pickup Splash', '1993', '0', 'Unrestored Original', 'yes', '1717862826.png', '2024-06-08 09:07:06', '0', NULL, 1),
 (159, 'Chuck Stone', 'Coulee City', '', 'Chevy', 'El Camino', '1967', '0', '1960s', 'yes', '1717862907.png', '2024-06-08 09:08:27', '0', NULL, 1),
 (160, 'Bruce Mercer', 'Woodenville', '', 'Chevy', 'Camaro RS/SS', '1968', '1', 'Resto-Mod', 'yes', '1717863084.png', '2024-06-08 09:11:24', '0', NULL, 1),
-(161, 'Bob buchmann', 'Moses Lake', '', 'Chevy', 'Chevelle', '1969', '1', '1960s', 'yes', '1717863088.png', '2024-06-08 09:11:28', '0', NULL, 1),
+(161, 'Bob buchmann', 'Moses Lake', '', 'Chevy', 'Chevelle', '1969', '2', '1960s', 'yes', '1717863088.png', '2024-06-08 09:11:28', '0', NULL, 1),
 (162, 'Manuel Perez', 'Soap Lake', '', 'Volkswagon', 'GTI', '2003', '0', 'Import', 'yes', '1717863263.png', '2024-06-08 09:14:23', '0', NULL, 1),
 (163, 'Brian Strausbaugh', 'East Wenatchee', '', 'Cadillac', 'Coupe De Ville', '1967', '0', 'Unrestored Original', 'yes', '1717863524.png', '2024-06-08 09:18:44', '0', NULL, 1),
 (164, 'Larry Camden', 'Moses Lake', '', 'Ford', 'roadster', '1928', '0', 'Street Rod', 'yes', '1717863552.png', '2024-06-08 09:19:12', '0', NULL, 1),
 (165, 'Weezer Dittman', 'Moses Lake', '', 'Chevy', 'Pickup', '1939', '0', 'Rat Rod', 'yes', '1717863709.png', '2024-06-08 09:21:49', '0', NULL, 1),
 (166, 'Robert Coble', 'Ephrata', '', 'Chevy', 'Special', '1940', '0', 'Street Rod', 'yes', '1717863770.png', '2024-06-08 09:22:50', '0', NULL, 1),
-(167, 'Bill Schmierer', 'Odessa', '', 'Studebaker', 'Lark', '1962', '0', '1960s', 'yes', '1717864081.png', '2024-06-08 09:28:01', '0', NULL, 1),
-(168, 'Dennis Bishop', 'Omak', '', 'Ford', 'Pickup', '1935', '0', 'Rat Rod', 'yes', '1717864087.png', '2024-06-08 09:28:07', '0', NULL, 1),
+(167, 'Bill Schmierer', 'Odessa', '', 'Studebaker', 'Lark', '1962', '8', '1960s', 'yes', '1717864081.png', '2024-06-08 09:28:01', '0', NULL, 1),
+(168, 'Dennis Bishop', 'Omak', '', 'Ford', 'Pickup', '1935', '10', 'Rat Rod', 'yes', '1717864087.png', '2024-06-08 09:28:07', '0', NULL, 1),
 (169, 'Mike Janke', 'Davenport', '', 'Chevy', 'Pickup', '1940', '0', 'Pickup', 'yes', '1717864294.png', '2024-06-08 09:31:34', '0', NULL, 1),
 (170, 'Denis Tjoelker', 'Quincy', '', 'international ', 'Kb1', '1938', '1', 'Rat Rod', 'yes', '1717864377.png', '2024-06-08 09:32:57', '0', NULL, 1),
 (171, 'Max Herreid', 'Wilson Creek', '', 'Chevy', 'Bel Air', '1958', '0', '1950s', 'yes', '1717864447.png', '2024-06-08 09:34:07', '0', NULL, 1),
@@ -430,14 +427,10 @@ INSERT INTO `vehicles` (`id`, `name`, `address`, `phone`, `vehicle_maker`, `vehi
 (191, 'mike roderick', 'Moses Lake', '', 'ford', 'Hi-boy', '1931', '2', 'Under Construction', 'yes', '1717868930.png', '2024-06-08 10:48:50', '0', NULL, 1),
 (192, 'Ureal Basteda', 'Ephrata', '', 'Dotson', '280Z', '!977', '0', 'Import', 'yes', '1717869106.png', '2024-06-08 10:51:46', '0', NULL, 1),
 (193, 'Michael Earing ', 'East weatchee ', '', 'ford ', 'galaxy ', '1966', '1', '1960s', 'yes', '1717869621.png', '2024-06-08 11:00:21', '0', NULL, 1),
-(194, 'George', 'Crescent Bar', '', 'Chevy', 'Pickup', '1972', '0', '1970s', 'yes', '1717869625.png', '2024-06-08 11:00:25', '0', NULL, 1),
-(195, 'Joe Thornton', 'Othello', '', 'ford ', 'cabriolet', '1932', '0', 'Custom', 'yes', '1717870376.png', '2024-06-08 11:12:56', '0', NULL, 1),
-(200, 'rakib', 'dk', '', 'dkdk', 'kd', 'kdkd', '0', '1960s', 'yes', '1729833792.png', '2024-10-25 07:23:12', '0', NULL, 1),
-(197, 'dd', 'ss', '', 'dd', 'see', 'ss', '0', 'Pickup', 'yes', '1729703444.png', '2024-10-23 19:10:44', '0', NULL, 1),
-(198, '', '', '', '', '', '', '0', 'Select Category', 'yes', '1729760176.png', '2024-10-24 10:56:16', '0', NULL, 1),
-(201, 'kkd', 'asad', '', 'dkdk', 'dddd', 'dddd', '0', '1950s', 'yes', '1729836945.png', '2024-10-25 08:15:45', '3', '1729836945.png', 1),
-(202, 'all', 'all', '', 'll', 'lll', '2050', '0', 'new Cat', 'yes', '1729871223.png', '2024-10-25 17:47:03', '0', '1729871223.png', 1),
-(203, 'kdkd', 'dkd', '', 'dkd', 'kd', '2051', '0', 'Pickup', 'yes', '1729871337.png', '2024-10-25 17:48:57', '0', '1729871337.png', 1);
+(194, 'George', 'Crescent Bar', '', 'Chevy', 'Pickup', '1972', '2', '1970s', 'yes', '1717869625.png', '2024-06-08 11:00:25', '0', NULL, 1),
+(195, 'Joe Thornton', 'Othello', '', 'ford ', 'cabriolet', '1932', '7', 'Custom', 'yes', '1717870376.png', '2024-06-08 11:12:56', '15', NULL, 1),
+(206, 'ele', 'eee', '', 'dkdkkd', 'ddd', 'dddd', '3', 'Modified', 'yes', '1731645920.png', '2024-11-15 05:45:20', '0', '1731645920.png', 1),
+(202, 'all', 'all', '', 'll', 'lll', '2050', '2', 'new Cat', 'yes', '1729871223.png', '2024-10-25 17:47:03', '10', '1729871223.png', 1);
 
 -- --------------------------------------------------------
 
@@ -648,7 +641,7 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `vehicles`
 --
 ALTER TABLE `vehicles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
 
 --
 -- AUTO_INCREMENT for table `vote`
