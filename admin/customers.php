@@ -52,7 +52,7 @@ $db->pageLimit = $pagelimit;
 
 
 // Get result of the query.
-$rows = $db->where('YEAR(created_date)',date('Y'))->where('status',true)->orderBy('id','desc')->arraybuilder()->paginate('vehicles', $page, $select);
+$rows = $db->where('YEAR(created_date)',date('Y'))->where('status',true)->orderBy('vote_status','desc')->orderBy('id','desc')->arraybuilder()->paginate('vehicles', $page, $select);
 $total_pages = $db->totalPages;
 
 include BASE_PATH . '/includes/header.php';
